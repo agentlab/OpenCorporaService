@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-SymbolicName: com.bmstu.coursework.oomph;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: %bundleProvider
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ CDC-1.1/Foundation-1.1
+Bundle-ActivationPolicy: lazy
+Export-Package: com.bmstu.coursework.oomph;version="1.0.0"
+Import-Package: com.bmstu.coursework.oomph.model,
+ org.eclipse.ecf.remoteservice
