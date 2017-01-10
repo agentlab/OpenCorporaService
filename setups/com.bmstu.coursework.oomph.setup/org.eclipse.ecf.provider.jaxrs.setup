@@ -41,7 +41,7 @@
         id="com.bmstu.coursework.oomph">
       <predicate
           xsi:type="predicates:NamePredicate"
-          pattern="com.bmstu.coursework.oomph"/>
+          pattern="com.bmstu.coursework.oomph*"/>
     </workingSet>
   </setupTask>
   <setupTask

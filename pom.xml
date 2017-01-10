@@ -19,6 +19,8 @@
 	<modules>
 		<module>plugins</module>
 		<module>products</module>
+		<module>releng</module>
+		<module>sites</module>
 	</modules>
 	
 	<profiles>
@@ -62,8 +64,8 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>org.eclipse.ecf.provider.jaxrs</groupId>
-							<artifactId>org.eclipse.ecf.provider.jaxrs.releng</artifactId>
+							<groupId>com.bmstu.coursework.oomph</groupId>
+							<artifactId>com.bmstu.coursework.oomph.releng</artifactId>
 							<version>1.0.0-SNAPSHOT</version>
 						</artifact>
 					</target>
