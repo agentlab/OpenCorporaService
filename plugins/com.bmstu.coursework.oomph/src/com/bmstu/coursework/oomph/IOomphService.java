@@ -46,4 +46,14 @@ public interface IOomphService {
      * @return project with given name. Can return <code>null</code>.
      */
     Project get(ProjectName projectName);
+
+    /**
+    *
+    * Removes project with given name. If there is no project with such name, returns <code>null</code>.
+    *
+    * @param projectName - project name. Can't be <code>null</code>.
+    *
+    * @return message to user. (Deleted or not). Can't return <code>null</code>.
+    */
+    String delete(ProjectName projectName);
 }

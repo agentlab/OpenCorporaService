@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Dictionary;
+import java.util.Iterator;
 
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.cm.ManagedService;
@@ -73,6 +74,20 @@ public class OomphComponent
         }
 
         return null;
+    }
+
+    @Override
+    public String delete(ProjectName projectName) {
+        for (Iterator<Project> it = projects.iterator(); it.hasNext();)
+        {
+            Project project = it.next();
+            if (project.getName().equals(projectName.getProjectName()))
+            {
+                it.remove();
+                return "Removed"; //$NON-NLS-1$
+            }
+        }
+        return "No such project."; //$NON-NLS-1$
     }
 
     @Activate
