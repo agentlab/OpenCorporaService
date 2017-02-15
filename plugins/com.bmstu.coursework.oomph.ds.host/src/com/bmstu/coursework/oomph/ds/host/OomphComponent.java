@@ -6,11 +6,8 @@ package com.bmstu.coursework.oomph.ds.host;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Dictionary;
 import java.util.Iterator;
 
-import org.osgi.service.cm.ConfigurationException;
-import org.osgi.service.cm.ManagedService;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -33,7 +30,7 @@ import com.bmstu.coursework.oomph.model.ProjectName;
         "ecf.jaxrs.jersey.server.urlContext=http://localhost:8080", "ecf.jaxrs.jersey.server.alias=/oomph",
         "service.pid=com.bmstu.coursework.oomph.ds.host.OomphComponent" })
 public class OomphComponent
-    implements IOomphService, ManagedService {
+    implements IOomphService {
 
     private Collection<Project> projects;
 
@@ -104,11 +101,6 @@ public class OomphComponent
     @Modified
     public void modify() {
         System.out.println("Oomph service modified"); //$NON-NLS-1$
-    }
-
-    @Override
-    public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
-        // Does nothing
     }
 
     private Collection<String> getProjectNames() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
-<target name="Generated from OomphConfigService" sequenceNumber="1">
+<target name="Generated from OomphConfigService" sequenceNumber="2">
   <locations>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="ch.qos.logback.classic" version="0.0.0"/>
@@ -10,11 +10,10 @@
       <unit id="com.google.inject.assistedinject" version="0.0.0"/>
       <unit id="com.google.inject.multibindings" version="0.0.0"/>
       <unit id="com.ibm.icu" version="0.0.0"/>
-      <unit id="com.jcraft.jsch" version="0.0.0"/>
-      <unit id="com.sun.syndication" version="0.0.0"/>
       <unit id="javax.annotation" version="0.0.0"/>
       <unit id="javax.el" version="0.0.0"/>
       <unit id="javax.inject" version="0.0.0"/>
+      <unit id="javax.persistence" version="0.0.0"/>
       <unit id="javax.servlet" version="0.0.0"/>
       <unit id="javax.servlet.jsp" version="0.0.0"/>
       <unit id="javax.validation" version="0.0.0"/>
@@ -33,10 +32,7 @@
       <unit id="org.apache.felix.gogo.command" version="0.0.0"/>
       <unit id="org.apache.felix.gogo.runtime" version="0.0.0"/>
       <unit id="org.apache.felix.gogo.shell" version="0.0.0"/>
-      <unit id="org.apache.httpcomponents.httpclient" version="0.0.0"/>
-      <unit id="org.apache.httpcomponents.httpcore" version="0.0.0"/>
       <unit id="org.apache.jasper.glassfish" version="0.0.0"/>
-      <unit id="org.apache.log4j" version="0.0.0"/>
       <unit id="org.apache.mina.core" version="0.0.0"/>
       <unit id="org.apache.sshd.core" version="0.0.0"/>
       <unit id="org.glassfish.hk2.osgi-resource-locator" version="0.0.0"/>
@@ -44,7 +40,6 @@
       <unit id="org.hamcrest.generator" version="0.0.0"/>
       <unit id="org.hamcrest.integration" version="0.0.0"/>
       <unit id="org.hamcrest.library" version="0.0.0"/>
-      <unit id="org.jdom" version="0.0.0"/>
       <unit id="org.json" version="0.0.0"/>
       <unit id="org.objectweb.asm" version="0.0.0"/>
       <unit id="org.objenesis" version="0.0.0"/>
@@ -60,7 +55,6 @@
       <unit id="org.w3c.dom.events" version="0.0.0"/>
       <unit id="org.w3c.dom.smil" version="0.0.0"/>
       <unit id="org.w3c.dom.svg" version="0.0.0"/>
-      <unit id="org.xbill.dns" version="0.0.0"/>
       <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -94,30 +88,20 @@
       <unit id="org.eclipse.swt.gtk.linux.arm" version="0.0.0"/>
       <unit id="org.eclipse.swt.gtk.solaris.sparc" version="0.0.0"/>
       <unit id="org.eclipse.swt.gtk.solaris.x86" version="0.0.0"/>
-      <repository location="http://agentlab.ru/p2/orbit/missing-swt-fragments/"/>
+      <repository location="http://agentlab.ru/p2/orbit/missing-swt-fragments/updates/nightly/"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="org.eclipse.ant.core" version="0.0.0"/>
-      <unit id="org.eclipse.ant.launching" version="0.0.0"/>
-      <unit id="org.eclipse.ant.ui" version="0.0.0"/>
-      <unit id="org.eclipse.compare" version="0.0.0"/>
-      <unit id="org.eclipse.compare.core" version="0.0.0"/>
+      <unit id="a.jre.javase" version="0.0.0"/>
       <unit id="org.eclipse.core.commands" version="0.0.0"/>
       <unit id="org.eclipse.core.contenttype" version="0.0.0"/>
       <unit id="org.eclipse.core.databinding" version="0.0.0"/>
       <unit id="org.eclipse.core.databinding.observable" version="0.0.0"/>
       <unit id="org.eclipse.core.databinding.property" version="0.0.0"/>
       <unit id="org.eclipse.core.expressions" version="0.0.0"/>
-      <unit id="org.eclipse.core.externaltools" version="0.0.0"/>
-      <unit id="org.eclipse.core.filebuffers" version="0.0.0"/>
-      <unit id="org.eclipse.core.filesystem" version="0.0.0"/>
       <unit id="org.eclipse.core.jobs" version="0.0.0"/>
-      <unit id="org.eclipse.core.resources" version="0.0.0"/>
       <unit id="org.eclipse.core.runtime" version="0.0.0"/>
       <unit id="org.eclipse.core.runtime.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.core.variables" version="0.0.0"/>
-      <unit id="org.eclipse.debug.core" version="0.0.0"/>
-      <unit id="org.eclipse.debug.ui" version="0.0.0"/>
       <unit id="org.eclipse.e4.core.commands" version="0.0.0"/>
       <unit id="org.eclipse.e4.core.contexts" version="0.0.0"/>
       <unit id="org.eclipse.e4.core.di" version="0.0.0"/>
@@ -204,21 +188,15 @@
       <unit id="org.eclipse.equinox.p2.console" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.core" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.director" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.director.app" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.engine" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.garbagecollector" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.jarprocessor" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.metadata" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.metadata.repository" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.operations" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.publisher" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.publisher.eclipse" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.repository" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.repository.tools" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.touchpoint.eclipse" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.touchpoint.natives" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.transport.ecf" version="0.0.0"/>
-      <unit id="org.eclipse.equinox.p2.ui" version="0.0.0"/>
       <unit id="org.eclipse.equinox.preferences" version="0.0.0"/>
       <unit id="org.eclipse.equinox.region" version="0.0.0"/>
       <unit id="org.eclipse.equinox.registry" version="0.0.0"/>
@@ -245,15 +223,7 @@
       <unit id="org.eclipse.equinox.weaving.hook" version="0.0.0"/>
       <unit id="org.eclipse.equinox.wireadmin" version="0.0.0"/>
       <unit id="org.eclipse.help" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.core" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.core.manipulation" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.debug" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.debug.ui" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.junit" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.junit.core" version="0.0.0"/>
       <unit id="org.eclipse.jdt.junit.runtime" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.launching" version="0.0.0"/>
-      <unit id="org.eclipse.jdt.ui" version="0.0.0"/>
       <unit id="org.eclipse.jetty.continuation" version="0.0.0"/>
       <unit id="org.eclipse.jetty.http" version="0.0.0"/>
       <unit id="org.eclipse.jetty.io" version="0.0.0"/>
@@ -263,43 +233,15 @@
       <unit id="org.eclipse.jetty.util" version="0.0.0"/>
       <unit id="org.eclipse.jface" version="0.0.0"/>
       <unit id="org.eclipse.jface.databinding" version="0.0.0"/>
-      <unit id="org.eclipse.jface.text" version="0.0.0"/>
-      <unit id="org.eclipse.ltk.core.refactoring" version="0.0.0"/>
-      <unit id="org.eclipse.ltk.ui.refactoring" version="0.0.0"/>
       <unit id="org.eclipse.osgi" version="0.0.0"/>
       <unit id="org.eclipse.osgi.compatibility.state" version="0.0.0"/>
       <unit id="org.eclipse.osgi.services" version="0.0.0"/>
       <unit id="org.eclipse.osgi.util" version="0.0.0"/>
-      <unit id="org.eclipse.pde.build" version="0.0.0"/>
-      <unit id="org.eclipse.pde.core" version="0.0.0"/>
       <unit id="org.eclipse.pde.junit.runtime" version="0.0.0"/>
-      <unit id="org.eclipse.pde.launching" version="0.0.0"/>
-      <unit id="org.eclipse.pde.ui" version="0.0.0"/>
-      <unit id="org.eclipse.search" version="0.0.0"/>
       <unit id="org.eclipse.swt" version="0.0.0"/>
-      <unit id="org.eclipse.team.core" version="0.0.0"/>
-      <unit id="org.eclipse.team.ui" version="0.0.0"/>
-      <unit id="org.eclipse.text" version="0.0.0"/>
       <unit id="org.eclipse.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ui.cheatsheets" version="0.0.0"/>
-      <unit id="org.eclipse.ui.console" version="0.0.0"/>
-      <unit id="org.eclipse.ui.editors" version="0.0.0"/>
-      <unit id="org.eclipse.ui.externaltools" version="0.0.0"/>
-      <unit id="org.eclipse.ui.forms" version="0.0.0"/>
-      <unit id="org.eclipse.ui.ide" version="0.0.0"/>
-      <unit id="org.eclipse.ui.intro" version="0.0.0"/>
-      <unit id="org.eclipse.ui.intro.quicklinks" version="0.0.0"/>
-      <unit id="org.eclipse.ui.intro.universal" version="0.0.0"/>
-      <unit id="org.eclipse.ui.navigator" version="0.0.0"/>
-      <unit id="org.eclipse.ui.navigator.resources" version="0.0.0"/>
-      <unit id="org.eclipse.ui.trace" version="0.0.0"/>
-      <unit id="org.eclipse.ui.views" version="0.0.0"/>
-      <unit id="org.eclipse.ui.views.log" version="0.0.0"/>
-      <unit id="org.eclipse.ui.views.properties.tabbed" version="0.0.0"/>
       <unit id="org.eclipse.ui.workbench" version="0.0.0"/>
-      <unit id="org.eclipse.ui.workbench.texteditor" version="0.0.0"/>
-      <unit id="org.eclipse.update.configurator" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/eclipse/updates/4.6/R-4.6.1-201609071200/"/>
+      <repository location="http://download.eclipse.org/eclipse/updates/4.6/"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="org.eclipse.ecf.provider.jaxrs" version="0.0.0"/>
@@ -312,124 +254,31 @@
       <repository location="http://agentlab.ru/pd/p2/cloud-jaxrsproviders"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="ch.ethz.iks.r_osgi.remote" version="0.0.0"/>
-      <unit id="ch.ethz.iks.slp" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.async" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.consumer" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.consumer.ds" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.consumer.ds.async" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.consumer.filediscovery" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.consumer.filediscovery.rest" version="0.0.0"/>
-      <unit id="com.mycorp.examples.timeservice.host" version="0.0.0"/>
-      <unit id="org.apache.hadoop.zookeeper" version="0.0.0"/>
+      <unit id="org.apache.httpcomponents.httpclient" version="0.0.0"/>
+      <unit id="org.apache.httpcomponents.httpcore" version="0.0.0"/>
       <unit id="org.eclipse.ecf" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.console" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.console.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.core.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.core.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.datashare" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.datashare.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.discovery" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.dnssd.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.jmdns.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.slp.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.browser" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.edit" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.model" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.properties" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.properties.tabbed" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.ui.userinput" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.discovery.zookeeper.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.doc" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.docshare" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.docshare.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.eventadmin.examples.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.eventadmin.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.example.clients" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.example.collab" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.example.collab.editor" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.examples.eventadmin.app" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.filetransfer.ui" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.identity" version="0.0.0"/>
       <unit id="org.eclipse.ecf.osgi.services.distribution" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.osgi.services.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.osgi.services.remoteserviceadmin" version="0.0.0"/>
       <unit id="org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.presence" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.presence.bot" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.presence.collab.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.presence.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.presence.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.protocol.bittorrent" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.protocol.msn" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.bittorrent" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.bittorrent.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.datashare" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.datashare.nio" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.discovery" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.dnssd" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.filetransfer" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.filetransfer.efs" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.filetransfer.httpclient4" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.filetransfer.scp" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.generic.datashare.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.generic.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.generic.remoteservice.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.irc" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.irc.ui" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.provider.filetransfer.httpclient4.ssl" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.provider.filetransfer.ssl" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.jmdns" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.jslp" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.msn" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.msn.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.r_osgi" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.remoteservice" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.xmpp" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.xmpp.datashare" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.xmpp.remoteservice" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.xmpp.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.zookeeper" version="0.0.0"/>
       <unit id="org.eclipse.ecf.remoteservice" version="0.0.0"/>
       <unit id="org.eclipse.ecf.remoteservice.asyncproxy" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.eventadmin" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.examples.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.remoteservice.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.rest" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.rest.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.rest.synd" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.rest.synd.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.rosgi.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.sdk.examples.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.servlet" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.servlet.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.soap" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.soap.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservice.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.remoteservices.tooling.pde" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.server" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.server.generic" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.server.generic.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.sharedobject" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.sharedobject.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.storage" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.sync" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.telephony.call" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.telephony.call.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.ui.capabilities" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.xmpp.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.ssl" version="0.0.0"/>
       <unit id="org.eclipse.osgi.services.remoteserviceadmin" version="0.0.0"/>
-      <unit id="org.eclipse.team.ecf.core" version="0.0.0"/>
-      <unit id="org.eclipse.team.ecf.ui" version="0.0.0"/>
-      <unit id="org.jivesoftware.smack" version="0.0.0"/>
       <repository location="http://download.eclipse.org/rt/ecf/latest/site.p2"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -472,19 +321,6 @@
       <unit id="org.glassfish.jersey.media.jersey-media-json-jackson" version="0.0.0"/>
       <unit id="org.objectweb.asm.all.debug" version="0.0.0"/>
       <repository location="http://agentlab.ru/pd/p2/che/"/>
-    </location>
-    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="javax.persistence" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.filetransfer.httpclient4.ssl" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.filetransfer.ssl" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.ssl" version="0.0.0"/>
-      <unit id="org.eclipse.emf.common.ui" version="0.0.0"/>
-      <unit id="org.eclipse.emf.edit" version="0.0.0"/>
-      <unit id="org.eclipse.emf.edit.ui" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/releases/neon/201610111000"/>
     </location>
   </locations>
 </target>

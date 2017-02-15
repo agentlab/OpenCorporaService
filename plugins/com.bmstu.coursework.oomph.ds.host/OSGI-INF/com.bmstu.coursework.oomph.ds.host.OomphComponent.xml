@@ -8,6 +8,5 @@
    <implementation class="com.bmstu.coursework.oomph.ds.host.OomphComponent"/>
    <service>
       <provide interface="com.bmstu.coursework.oomph.IOomphService"/>
-      <provide interface="org.osgi.service.cm.ManagedService"/>
    </service>
 </scr:component>

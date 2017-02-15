@@ -13,5 +13,4 @@ Import-Package: com.bmstu.coursework.oomph;version="[1.0.0,2.0.0)",
  org.osgi.service.component.annotations;version="[1.2.0,2.0.0)"
 Bundle-Vendor: %bundleProvider
 Bundle-ActivationPolicy: lazy
-Service-Component: OSGI-INF/com.bmstu.coursework.oomph.ds.host.OomphComponent.xml,
- OSGI-INF/com.bmstu.coursework.oomph.ds.host.OomphConfigurer.xml
+Service-Component: OSGI-INF/com.bmstu.coursework.oomph.ds.host.OomphComponent.xml
