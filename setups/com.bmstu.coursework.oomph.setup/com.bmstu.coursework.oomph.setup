@@ -54,7 +54,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${com.bmstu.coursework.oomph.git.clone.location/releng/com.bmstu.coursework.oomph.releng/com.bmstu.coursework.oomph.releng.target}</value>
+          <value>${com.bmstu.coursework.oomph.git.clone.location/releng/com.bmstu.coursework.opencopra.releng/com.bmstu.coursework.opencopra.releng.target}</value>
         </detail>
         <detail
             key="includeAllPlatforms">
