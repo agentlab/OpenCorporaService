@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %bundleName
-Bundle-SymbolicName: com.bmstu.coursework.oomph.ds.host;singleton:=true
+Bundle-SymbolicName: com.bmstu.coursework.opencopra.ds.host;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
  CDC-1.1/Foundation-1.1

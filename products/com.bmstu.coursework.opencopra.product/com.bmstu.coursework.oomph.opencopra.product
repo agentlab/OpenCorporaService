@@ -32,8 +32,8 @@
       <plugin id="ch.qos.logback.core"/>
       <plugin id="ch.qos.logback.slf4j" fragment="true"/>
       <plugin id="com.bmstu.coursework.oomph"/>
-      <plugin id="com.bmstu.coursework.oomph.ds.host"/>
-      <plugin id="com.bmstu.coursework.oomph.model"/>
+      <plugin id="com.bmstu.coursework.opencopra.ds.host"/>
+      <plugin id="com.bmstu.coursework.opencopra.model"/>
       <plugin id="com.fasterxml.jackson.core.jackson-annotations"/>
       <plugin id="com.fasterxml.jackson.core.jackson-core"/>
       <plugin id="com.fasterxml.jackson.core.jackson-databind"/>
