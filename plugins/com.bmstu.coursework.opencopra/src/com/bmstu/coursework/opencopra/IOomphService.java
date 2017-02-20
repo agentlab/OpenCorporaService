@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.bmstu.coursework.oomph;
+package com.bmstu.coursework.opencopra;
 
 import java.util.List;
 

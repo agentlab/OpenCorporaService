@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.bmstu.coursework.oomph.ds.host;
+package com.bmstu.coursework.opencopra.ds.host;
 
 import java.io.IOException;
 import java.util.Dictionary;
@@ -17,7 +17,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
-import com.bmstu.coursework.oomph.IOomphService;
+import com.bmstu.coursework.opencopra.IOomphService;
 
 /**
  *

@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.bmstu.coursework.oomph.ds.host;
+package com.bmstu.coursework.opencopra.ds.host;
 
 import java.io.IOException;
 import java.util.Dictionary;
