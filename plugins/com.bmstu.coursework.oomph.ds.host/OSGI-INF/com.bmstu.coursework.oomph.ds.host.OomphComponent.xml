@@ -3,10 +3,11 @@
    <property name="service.exported.interfaces" value="*"/>
    <property name="service.exported.configs" value="ecf.jaxrs.jersey.server"/>
    <property name="ecf.jaxrs.jersey.server.urlContext" value="http://localhost:8080"/>
-   <property name="ecf.jaxrs.jersey.server.alias" value="/oomph"/>
+   <property name="ecf.jaxrs.jersey.server.alias" value="/"/>
    <property name="service.pid" value="com.bmstu.coursework.oomph.ds.host.OomphComponent"/>
-   <implementation class="com.bmstu.coursework.oomph.ds.host.OomphComponent"/>
    <service>
       <provide interface="com.bmstu.coursework.oomph.IOomphService"/>
+      <provide interface="org.osgi.service.cm.ManagedService"/>
    </service>
+   <implementation class="com.bmstu.coursework.oomph.ds.host.OomphComponent"/>
 </scr:component>

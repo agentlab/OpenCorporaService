@@ -3,57 +3,39 @@
  */
 package com.bmstu.coursework.oomph;
 
-import java.util.Collection;
+import java.util.List;
 
-import com.bmstu.coursework.oomph.model.Project;
-import com.bmstu.coursework.oomph.model.ProjectName;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Response;
 
 /**
  *
- * Oomph service. Stores projects given by {@link #put(Project)} method.
- * <br>
- * To get project user should use {@link #get(String)} method.
  *
- * @author Prihodko
+ * @author Naymushin
  *
  */
+@Path("oomph")
 public interface IOomphService {
 
-    /**
-     *
-     * Put project for storing.
-     *
-     * @param project - project to put. Can't be <code>null</code>.
-     *
-     * @return message to user. (Added or not). Can't return <code>null</code>.
-     */
-    String put(Project project);
+	@Path("/{servicename}/{action}")
+	@POST
+	Response post(@PathParam("servicename") String service, @PathParam("action") String action, @QueryParam("section") String section, @QueryParam("name") String name, @QueryParam("left") String left, @QueryParam("right") String right, @QueryParam("id") String id, @QueryParam("params") final List<String> params);
 
-    /**
-     *
-     * Returns collection with stored project names.
-     *
-     * @return collection with stored project names. Can't be <code>null</code>.
-     */
-    Collection<String> get();
+	@Path("/{servicename}/{action}")
+	@GET
+	Response get(@PathParam("servicename") String service, @PathParam("action") String action, @QueryParam("section") String section, @QueryParam("name") String name, @QueryParam("left") String left, @QueryParam("right") String right, @QueryParam("id") String id);
 
-    /**
-     *
-     * Returns project with given name. If there is no project with such name, returns <code>null</code>.
-     *
-     * @param projectName - project name. Can't be <code>null</code>.
-     *
-     * @return project with given name. Can return <code>null</code>.
-     */
-    Project get(ProjectName projectName);
+	@Path("/{servicename}/{action}")
+	@PUT
+	Response put(@PathParam("servicename") String service, @PathParam("action") String action, @QueryParam("section") String section, @QueryParam("name") String name, @QueryParam("left") String left, @QueryParam("right") String right, @QueryParam("id") String id, @QueryParam("params") final List<String> params);
 
-    /**
-    *
-    * Removes project with given name. If there is no project with such name, returns <code>null</code>.
-    *
-    * @param projectName - project name. Can't be <code>null</code>.
-    *
-    * @return message to user. (Deleted or not). Can't return <code>null</code>.
-    */
-    String delete(ProjectName projectName);
+	@Path("/{servicename}/{action}")
+	@DELETE
+	Response delete(@PathParam("servicename") String service, @PathParam("action") String action, @QueryParam("section") String section, @QueryParam("name") String name, @QueryParam("left") String left, @QueryParam("right") String right, @QueryParam("id") String id);
 }

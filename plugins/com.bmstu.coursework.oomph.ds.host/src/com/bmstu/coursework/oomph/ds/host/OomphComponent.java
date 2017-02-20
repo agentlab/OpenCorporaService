@@ -4,10 +4,13 @@
 package com.bmstu.coursework.oomph.ds.host;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.Dictionary;
+import java.util.List;
 
+import javax.ws.rs.core.Response;
+
+import org.osgi.service.cm.ConfigurationException;
+import org.osgi.service.cm.ManagedService;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -15,8 +18,6 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
 import com.bmstu.coursework.oomph.IOomphService;
-import com.bmstu.coursework.oomph.model.Project;
-import com.bmstu.coursework.oomph.model.ProjectName;
 
 /**
  *
@@ -27,69 +28,139 @@ import com.bmstu.coursework.oomph.model.ProjectName;
  */
 @Component(enabled = true, immediate = true,
     property = { "service.exported.interfaces=*", "service.exported.configs=ecf.jaxrs.jersey.server",
-        "ecf.jaxrs.jersey.server.urlContext=http://localhost:8080", "ecf.jaxrs.jersey.server.alias=/oomph",
+        "ecf.jaxrs.jersey.server.urlContext=http://localhost:8080", "ecf.jaxrs.jersey.server.alias=/",
         "service.pid=com.bmstu.coursework.oomph.ds.host.OomphComponent" })
 public class OomphComponent
-    implements IOomphService {
+    implements IOomphService, ManagedService {
 
-    private Collection<Project> projects;
-
+    /* Метод Create */
     @Override
-    public String put(Project project) {
-        if (!projects.contains(project))
-        {
-            if (projects.add(project))
-            {
-                return "Added"; //$NON-NLS-1$
-            }
-            else
-            {
-                return "Not added. Error."; //$NON-NLS-1$
-            }
-        }
-        else
-        {
-            return "Not added. Already exists"; //$NON-NLS-1$
+    public Response post(String service, String action, String section, String name, String left, String right,
+        String id, List<String> params) {
+
+
+        switch (section) {
+		case "grammemes": //$NON-NLS-1$
+            GrammemeProcessor gmp = new GrammemeProcessor();
+            return Response.ok().entity(gmp.create(name, params)).build();
+
+		case "restrictions": //$NON-NLS-1$
+            RestrictionProcessor rtp = new RestrictionProcessor();
+            return Response.ok().entity(rtp.create(left, right, params)).build();
+
+		case "lemmata": //$NON-NLS-1$
+            LemmaProcessor lmp = new LemmaProcessor();
+            return Response.ok().entity(lmp.create(id, params)).build();
+
+		case "link_types": //$NON-NLS-1$
+            LinkTypeProcessor ltp = new LinkTypeProcessor();
+            return Response.ok().entity(ltp.create(id, params)).build();
+
+		case "links": //$NON-NLS-1$
+            LinkProcessor lkp = new LinkProcessor();
+            return Response.ok().entity(lkp.create(id, params)).build();
+
+        default:
+			return Response.ok().entity("Error: wrong section name!").build(); //$NON-NLS-1$
         }
     }
 
+    /* Метод Read */
     @Override
-    public Collection<String> get() {
-        Collection<String> projectNames = getProjectNames();
+    public Response get(String service, String action, String section, String name, String left, String right,
+        String id) {
 
-        return projectNames;
+
+        switch (section) {
+		case "grammemes": //$NON-NLS-1$
+            GrammemeProcessor gmp = new GrammemeProcessor();
+            return Response.ok().entity(gmp.read(name)).build();
+
+		case "restrictions": //$NON-NLS-1$
+            RestrictionProcessor rtp = new RestrictionProcessor();
+            return Response.ok().entity(rtp.read(left, right)).build();
+		case "lemmata": //$NON-NLS-1$
+            LemmaProcessor lmp = new LemmaProcessor();
+            return Response.ok().entity(lmp.read(id)).build();
+
+		case "link_types": //$NON-NLS-1$
+            LinkTypeProcessor ltp = new LinkTypeProcessor();
+            return Response.ok().entity(ltp.read(id)).build();
+
+		case "links": //$NON-NLS-1$
+            LinkProcessor lkp = new LinkProcessor();
+            return Response.ok().entity(lkp.read(id)).build();
+
+        default:
+			return Response.ok().entity("Error: wrong section name!").build(); //$NON-NLS-1$
+        }
     }
 
+    /* Метод Update */
     @Override
-    public Project get(ProjectName projectName) {
-        for (Project project : projects)
-        {
-            if (project.getName().equals(projectName.getProjectName()))
-            {
-                return project;
-            }
-        }
+    public Response put(String service, String action, String section, String name, String left, String right,
+        String id, List<String> params) {
 
-        return null;
+
+        switch (section) {
+		case "grammemes": //$NON-NLS-1$
+            GrammemeProcessor gmp = new GrammemeProcessor();
+            return Response.ok().entity(gmp.update(name, params)).build();
+
+		case "restrictions": //$NON-NLS-1$
+            RestrictionProcessor rtp = new RestrictionProcessor();
+            return Response.ok().entity(rtp.update(left, right, params)).build();
+
+		case "lemmata": //$NON-NLS-1$
+            LemmaProcessor lmp = new LemmaProcessor();
+            return Response.ok().entity(lmp.update(id, params)).build();
+
+		case "link_types": //$NON-NLS-1$
+            LinkTypeProcessor ltp = new LinkTypeProcessor();
+            return Response.ok().entity(ltp.update(id, params)).build();
+
+		case "links": //$NON-NLS-1$
+            LinkProcessor lkp = new LinkProcessor();
+            return Response.ok().entity(lkp.update(id, params)).build();
+
+        default:
+			return Response.ok().entity("Error: wrong section name!").build(); //$NON-NLS-1$
+        }
     }
 
+    /* Метод Delete */
     @Override
-    public String delete(ProjectName projectName) {
-        for (Iterator<Project> it = projects.iterator(); it.hasNext();)
-        {
-            Project project = it.next();
-            if (project.getName().equals(projectName.getProjectName()))
-            {
-                it.remove();
-                return "Removed"; //$NON-NLS-1$
-            }
+    public Response delete(String service, String action, String section, String name, String left, String right,
+        String id) {
+
+        switch (section) {
+		case "grammemes": //$NON-NLS-1$
+            GrammemeProcessor gmp = new GrammemeProcessor();
+            return Response.ok().entity(gmp.delete(name)).build();
+
+		case "restrictions": //$NON-NLS-1$
+            RestrictionProcessor rtp = new RestrictionProcessor();
+            return Response.ok().entity(rtp.delete(left, right)).build();
+
+		case "lemmata": //$NON-NLS-1$
+            LemmaProcessor lmp = new LemmaProcessor();
+            return Response.ok().entity(lmp.delete(id)).build();
+
+		case "link_types": //$NON-NLS-1$
+            LinkTypeProcessor ltp = new LinkTypeProcessor();
+            return Response.ok().entity(ltp.delete(id)).build();
+
+		case "links": //$NON-NLS-1$
+            LinkProcessor lkp = new LinkProcessor();
+            return Response.ok().entity(lkp.delete(id)).build();
+
+        default:
+			return Response.ok().entity("Error: wrong section name!").build(); //$NON-NLS-1$
         }
-        return "No such project."; //$NON-NLS-1$
     }
 
     @Activate
     public void activate(ComponentContext context) throws IOException {
-        projects = new ArrayList<>();
         System.out.println("Oomph service started"); //$NON-NLS-1$
     }
 
@@ -103,12 +174,8 @@ public class OomphComponent
         System.out.println("Oomph service modified"); //$NON-NLS-1$
     }
 
-    private Collection<String> getProjectNames() {
-        Collection<String> projectNames = new ArrayList<>();
-        projects.parallelStream().forEach((project) -> {
-            projectNames.add(project.getName());
-        });
-        return projectNames;
+    @Override
+    public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
+        // Does nothing
     }
-
 }
