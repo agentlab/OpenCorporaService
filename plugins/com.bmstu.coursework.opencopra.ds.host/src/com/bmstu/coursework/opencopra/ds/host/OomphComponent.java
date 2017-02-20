@@ -18,6 +18,11 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
 import com.bmstu.coursework.opencopra.IOomphService;
+import com.bmstu.coursework.opencopra.grammar.impl.GrammemeProcessor;
+import com.bmstu.coursework.opencopra.grammar.impl.LemmaProcessor;
+import com.bmstu.coursework.opencopra.grammar.impl.LinkProcessor;
+import com.bmstu.coursework.opencopra.grammar.impl.LinkTypeProcessor;
+import com.bmstu.coursework.opencopra.grammar.impl.RestrictionProcessor;
 
 /**
  *

@@ -4,13 +4,16 @@
       ECF Jax-RS Providers Update Site
    </description>
    <bundle id="com.bmstu.coursework.opencopra" version="1.0.0.qualifier">
-      <category name="com.bmstu.coursework.oomph.site"/>
+      <category name="com.bmstu.coursework.opencopra.site"/>
    </bundle>
    <bundle id="com.bmstu.coursework.opencopra.ds.host" version="1.0.0.qualifier">
-      <category name="com.bmstu.coursework.oomph.site"/>
+      <category name="com.bmstu.coursework.opencopra.site"/>
    </bundle>
    <bundle id="com.bmstu.coursework.opencopra.model" version="1.0.0.qualifier">
-      <category name="com.bmstu.coursework.oomph.site"/>
+      <category name="com.bmstu.coursework.opencopra.site"/>
    </bundle>
-   <category-def name="com.bmstu.coursework.oomph.site" label="OomphConfigService"/>
+   <bundle id="com.bmstu.coursework.opencopra.resources" version="1.0.0.qualifier">
+      <category name="com.bmstu.coursework.opencopra.site"/>
+   </bundle>
+   <category-def name="com.bmstu.coursework.opencopra.site" label="OomphConfigService"/>
 </site>

@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.bmstu.coursework.opencopra.ds.host;
+package com.bmstu.coursework.opencopra.grammar.impl;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -15,12 +15,16 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
+import com.bmstu.coursework.opencopra.grammar.AbstractProcessor;
+
 /**
  *
  * @Naymushin
  *
  */
-public class RestrictionProcessor {
+public class RestrictionProcessor
+    extends AbstractProcessor {
+
     public String type;
     public String auto;
     public String left;
@@ -31,8 +35,6 @@ public class RestrictionProcessor {
     public Element rootNode;
     public Document document;
 
-	public final String OLD_PATH = "e://kurs//dict.xml"; //$NON-NLS-1$
-	public final String NEW_PATH = "e://kurs//dict_new.xml"; //$NON-NLS-1$
 
     /* Конструктор */
     public RestrictionProcessor() {
