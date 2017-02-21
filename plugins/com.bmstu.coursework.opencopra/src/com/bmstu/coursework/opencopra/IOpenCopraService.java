@@ -20,7 +20,7 @@ import javax.ws.rs.core.Response;
  * @author Naymushin
  *
  */
-@Path("oomph")
+@Path("opencorpora")
 public interface IOpenCopraService {
 
 	@Path("/{servicename}/{action}")
