@@ -35,7 +35,7 @@ public class OpenCopraConfigurer
         if (configAdmin != null)
         {
             Configuration config =
-                configAdmin.getConfiguration("com.bmstu.coursework.oomph.ds.host.OomphComponent", null); //$NON-NLS-1$
+                configAdmin.getConfiguration("com.bmstu.coursework.opencopra.ds.host.OomphComponent", null); //$NON-NLS-1$
 
             Dictionary props = config.getProperties();
             if (props == null)
@@ -56,17 +56,17 @@ public class OpenCopraConfigurer
 
     @Activate
     public void activate(ComponentContext context) {
-        System.out.println("OomphConfigurer service started"); //$NON-NLS-1$
+        System.out.println("OpenCopraConfigurer service started"); //$NON-NLS-1$
     }
 
     @Deactivate
     public void deactivate(ComponentContext context) {
-        System.out.println("OomphConfigurer service stopped"); //$NON-NLS-1$
+        System.out.println("OpenCopraConfigurer service stopped"); //$NON-NLS-1$
     }
 
     @Modified
     public void modify() {
-        System.out.println("OomphConfigurer service modified"); //$NON-NLS-1$
+        System.out.println("OpenCopraConfigurer service modified"); //$NON-NLS-1$
     }
 
     @Override
