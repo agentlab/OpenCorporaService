@@ -15,8 +15,8 @@
     label="OomphConfigService">
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="com.bmstu.coursework.oomph.git.clone"
-      remoteURI="agentlab/OomphConfigService">
+      id="com.bmstu.coursework.opencorpora.git.clone"
+      remoteURI="agentlab/OpenCorporaService">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
