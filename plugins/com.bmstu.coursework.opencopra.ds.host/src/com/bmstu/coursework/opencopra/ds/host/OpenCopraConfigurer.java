@@ -26,7 +26,7 @@ import org.osgi.service.component.annotations.Reference;
  *
  */
 @Component(enabled = true, immediate = true)
-public class OomphConfigurer
+public class OpenCopraConfigurer
     implements ManagedService {
 
     @Reference

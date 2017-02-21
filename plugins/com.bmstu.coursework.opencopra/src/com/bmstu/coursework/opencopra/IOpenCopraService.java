@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
  *
  */
 @Path("oomph")
-public interface IOomphService {
+public interface IOpenCopraService {
 
 	@Path("/{servicename}/{action}")
 	@POST

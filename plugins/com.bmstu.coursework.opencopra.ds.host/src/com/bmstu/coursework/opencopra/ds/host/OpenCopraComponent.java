@@ -17,7 +17,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
-import com.bmstu.coursework.opencopra.IOomphService;
+import com.bmstu.coursework.opencopra.IOpenCopraService;
 import com.bmstu.coursework.opencopra.grammar.impl.GrammemeProcessor;
 import com.bmstu.coursework.opencopra.grammar.impl.LemmaProcessor;
 import com.bmstu.coursework.opencopra.grammar.impl.LinkProcessor;
@@ -35,8 +35,8 @@ import com.bmstu.coursework.opencopra.grammar.impl.RestrictionProcessor;
     property = { "service.exported.interfaces=*", "service.exported.configs=ecf.jaxrs.jersey.server",
         "ecf.jaxrs.jersey.server.urlContext=http://localhost:8080", "ecf.jaxrs.jersey.server.alias=/",
         "service.pid=com.bmstu.coursework.oomph.ds.host.OomphComponent" })
-public class OomphComponent
-    implements IOomphService, ManagedService {
+public class OpenCopraComponent
+    implements IOpenCopraService, ManagedService {
 
     /* Метод Create */
     @Override
