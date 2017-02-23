@@ -79,9 +79,18 @@
       </annotation>
       <requirement
           name="*"/>
+      <requirement
+          name="org.apache.servicemix.bundles.jdom"/>
+      <requirement
+          name="org.apache.servicemix.bundles.jdom.source"/>
       <sourceLocator
           rootFolder="${com.bmstu.coursework.oomph.git.clone.location}"
           locateNestedProjects="true"/>
+      <repositoryList
+          name="Neon">
+        <repository
+            url="http://agentlab.ru/pd/p2/eclipseorbit/"/>
+      </repositoryList>
     </targlet>
   </setupTask>
   <setupTask
